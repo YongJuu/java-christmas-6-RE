@@ -11,10 +11,17 @@ public class Order {
         this.menus = menus;
     }
 
+    public int getVisitDate() {
+        return visitDate;
+    }
+
+    public Map<Menu, Integer> getMenus() {
+        return menus;
+    }
+
     //총주문 금액 계산하기
     public int calculateTotalOrderMenusPrice() {
         int totalPrice = 0;
-        Map<Menu, Integer> menus = this.menus;
 
         for (Menu menu : menus.keySet()) {
             int price = menu.getPrice();

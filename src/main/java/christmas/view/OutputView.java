@@ -26,5 +26,15 @@ public class OutputView {
         String totalPrice = df.format(price);
 
         System.out.println(totalPrice + "원");
+        System.out.println();
+    }
+
+    public static void printGiftBenefit(Menu gift) {
+        System.out.println("<증정 메뉴>");
+        if (gift == null) {
+            System.out.println("없음");
+            return;
+        }
+        System.out.println(gift.getName() + " 1개");
     }
 }
