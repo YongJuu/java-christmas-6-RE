@@ -23,6 +23,6 @@ public class GiftEvent extends Event {
 
     @Override
     public Benefit doEvent(Order order) {
-        return new GiftBenefit("증정이벤트", gift.getPrice(), gift);
+        return new GiftBenefit("증정 이벤트", gift.getPrice(), gift);
     }
 }

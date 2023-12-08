@@ -30,16 +30,15 @@ public class EventPlanner {
         //출력
         OutputView.printTotalPrice(totalPrice);
 
-        /**
-         * 이벤트는 모두 적용해야 출력도 가능하다
-         */
+        //4) 증정 해당되는지 여부 판단 및 출력
         Benefits benefits = new Benefits();
         List<Benefit> list = applyAllEvent(order);
         benefits.setBenefits(list);
 
-        //4) 증정 해당되는지 여부 판단 및 출력
         OutputView.printGiftBenefit(benefits.getGift());
-        
+
+        //5) 모든 이벤트 적용 후 총 혜택 내역 출력해야 함
+        OutputView.printBenefitDetails(benefits);
 
     }
 

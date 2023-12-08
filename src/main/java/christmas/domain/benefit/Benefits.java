@@ -17,6 +17,27 @@ public class Benefits { //총 혜택 관리용
         }
         return false;
     }
+    
+    public List<String> getBenefitDetails() {
+        return benefits.stream()
+                .map(Benefit::toString)
+                .toList();
+    }
+
+    //총 혜택금액 계산하기
+    public Integer getTotalBenefitPrice() {
+        return benefits.stream()
+                .map(Benefit::getBenefitPrice)
+                .reduce(0, Integer::sum);
+    }
+
+    //총 할인금액만 계산
+    public Integer getTotalDiscountPrice() {
+        return benefits.stream()
+                .filter(benefit -> benefit instanceof DiscountBenefit)
+                .map(Benefit::getBenefitPrice)
+                .reduce(0, Integer::sum);
+    }
 
     public Menu getGift() {
         if (!hasGiftBenefit()) {

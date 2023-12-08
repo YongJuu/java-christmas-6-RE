@@ -1,8 +1,10 @@
 package christmas.view;
 
 import christmas.domain.Menu;
+import christmas.domain.benefit.Benefits;
 import java.text.DecimalFormat;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class OutputView {
 
@@ -35,6 +37,20 @@ public class OutputView {
             System.out.println("없음");
             return;
         }
-        System.out.println(gift.getName() + " 1개");
+        System.out.println(gift.getName() + " 1개" + System.lineSeparator());
+    }
+
+    public static void printBenefitDetails(Benefits benefits) {
+        System.out.println("<혜택 내역>");
+
+        if (benefits.getBenefitDetails().size() == 0) {
+            System.out.println("없음");
+            return;
+        }
+
+        String str = benefits.getBenefitDetails().stream()
+                .collect(Collectors.joining(System.lineSeparator()));
+        System.out.println(str);
+        System.out.println();
     }
 }

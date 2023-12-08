@@ -50,4 +50,8 @@ public enum Menu {
         // 이름과 일치하는 메뉴가 없는 경우 null 반환
         return null;
     }
+
+    public MenuType getMenuType() {
+        return menuType;
+    }
 }
