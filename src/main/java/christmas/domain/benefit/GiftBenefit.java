@@ -1,6 +1,6 @@
 package christmas.domain.benefit;
 
-import christmas.domain.Menu;
+import christmas.domain.menu.Menu;
 
 public class GiftBenefit extends Benefit {
     private final Menu gift;

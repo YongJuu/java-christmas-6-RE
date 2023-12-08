@@ -1,6 +1,6 @@
 package christmas.domain.benefit;
 
-import christmas.domain.Menu;
+import christmas.domain.menu.Menu;
 import java.util.List;
 
 public class Benefits { //총 혜택 관리용
@@ -17,7 +17,7 @@ public class Benefits { //총 혜택 관리용
         }
         return false;
     }
-    
+
     public List<String> getBenefitDetails() {
         return benefits.stream()
                 .map(Benefit::toString)

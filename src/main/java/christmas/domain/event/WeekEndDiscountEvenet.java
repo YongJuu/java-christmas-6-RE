@@ -1,10 +1,10 @@
 package christmas.domain.event;
 
-import christmas.domain.Menu;
-import christmas.domain.MenuType;
 import christmas.domain.Order;
 import christmas.domain.benefit.Benefit;
 import christmas.domain.benefit.DiscountBenefit;
+import christmas.domain.menu.Menu;
+import christmas.domain.menu.MenuType;
 import java.util.Calendar;
 import java.util.Date;
 

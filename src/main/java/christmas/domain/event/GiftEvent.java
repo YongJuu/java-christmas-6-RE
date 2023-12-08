@@ -1,9 +1,9 @@
 package christmas.domain.event;
 
-import christmas.domain.Menu;
 import christmas.domain.Order;
 import christmas.domain.benefit.Benefit;
 import christmas.domain.benefit.GiftBenefit;
+import christmas.domain.menu.Menu;
 
 public class GiftEvent extends Event {
     private final Integer priceForGift;

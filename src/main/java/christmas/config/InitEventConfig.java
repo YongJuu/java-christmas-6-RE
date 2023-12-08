@@ -1,12 +1,12 @@
 package christmas.config;
 
-import christmas.domain.Menu;
 import christmas.domain.event.ChristMasDiscountEvent;
 import christmas.domain.event.Event;
 import christmas.domain.event.GiftEvent;
 import christmas.domain.event.SpecialDiscountEvent;
 import christmas.domain.event.WeekDayDiscountEvent;
 import christmas.domain.event.WeekEndDiscountEvenet;
+import christmas.domain.menu.Menu;
 import java.util.List;
 
 public class InitEventConfig {
