@@ -40,6 +40,14 @@ public class EventPlanner {
         //5) 모든 이벤트 적용 후 총 혜택 내역 출력해야 함
         OutputView.printBenefitDetails(benefits);
 
+        //6) 총혜택 금액 출력
+        OutputView.printTotalBenefitPrice(benefits.getTotalBenefitPrice());
+
+        //7) 할인 후 예상 결제 금액
+        OutputView.printAfterDiscountTotalPrice(totalPrice - benefits.getTotalDiscountPrice());
+
+        //8) 뱃지
+
     }
 
     private static List<Benefit> applyAllEvent(Order order) {

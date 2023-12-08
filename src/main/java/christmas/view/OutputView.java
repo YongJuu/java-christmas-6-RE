@@ -19,16 +19,19 @@ public class OutputView {
         }
     }
 
+
     //총주문 금액 출력하기
     public static void printTotalPrice(int price) {
         System.out.println("할인 전 총주문 금액");
 
+        System.out.println(parsePriceFormat(price) + "원");
+        System.out.println();
+    }
+
+    private static String parsePriceFormat(int price) {
         //형식 맞추기
         DecimalFormat df = new DecimalFormat("###,###");
-        String totalPrice = df.format(price);
-
-        System.out.println(totalPrice + "원");
-        System.out.println();
+        return df.format(price);
     }
 
     public static void printGiftBenefit(Menu gift) {
@@ -51,6 +54,22 @@ public class OutputView {
         String str = benefits.getBenefitDetails().stream()
                 .collect(Collectors.joining(System.lineSeparator()));
         System.out.println(str);
+        System.out.println();
+    }
+
+    public static void printTotalBenefitPrice(int totalBenefitPrice) {
+        System.out.println("<총혜택 금액>");
+        String str = parsePriceFormat(totalBenefitPrice);
+
+        System.out.println("-" + str + "원");
+        System.out.println();
+    }
+
+    public static void printAfterDiscountTotalPrice(int totalBenefitPrice) {
+        System.out.println("<할인 후 예상 결제 금액>");
+        String str = parsePriceFormat(totalBenefitPrice);
+
+        System.out.println(str + "원");
         System.out.println();
     }
 }
