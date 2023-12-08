@@ -19,7 +19,12 @@ public class EventPlanner {
         OutputView.printOrderMenu(menus);
 
         //3) 할인 전 총주문 금액 계산하기
+        int totalPrice = order.calculateTotalOrderMenusPrice();
+        //출력
+        OutputView.printTotalPrice(totalPrice);
+
+        //이벤트 적용 ------------
+        //4) 증정메뉴 여부 판별
 
     }
-
 }

@@ -37,6 +37,10 @@ public enum Menu {
         return name;
     }
 
+    public int getPrice() {
+        return price;
+    }
+
     public static Menu getMenuByName(String name) {
         for (Menu menu : Menu.values()) {
             if (menu.getName().equalsIgnoreCase(name)) {
