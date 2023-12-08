@@ -1,11 +1,12 @@
 package christmas.controller;
 
 import christmas.config.InitEventConfig;
-import christmas.domain.Menu;
+import christmas.domain.Badge;
 import christmas.domain.Order;
 import christmas.domain.benefit.Benefit;
 import christmas.domain.benefit.Benefits;
 import christmas.domain.event.Event;
+import christmas.domain.menu.Menu;
 import christmas.view.InputView;
 import christmas.view.OutputView;
 import java.util.ArrayList;
@@ -47,6 +48,8 @@ public class EventPlanner {
         OutputView.printAfterDiscountTotalPrice(totalPrice - benefits.getTotalDiscountPrice());
 
         //8) 뱃지
+        Badge badge = Badge.getBadge(benefits.getTotalBenefitPrice());
+        OutputView.printEventBadge(badge);
 
     }
 

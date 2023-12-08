@@ -1,7 +1,8 @@
 package christmas.view;
 
-import christmas.domain.Menu;
+import christmas.domain.Badge;
 import christmas.domain.benefit.Benefits;
+import christmas.domain.menu.Menu;
 import java.text.DecimalFormat;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -71,5 +72,15 @@ public class OutputView {
 
         System.out.println(str + "원");
         System.out.println();
+    }
+
+    public static void printEventBadge(Badge badge) {
+        System.out.println("<12월 이벤트 배지>");
+
+        if (badge == null) {
+            System.out.println("없음");
+            return;
+        }
+        System.out.println(badge.getName());
     }
 }
